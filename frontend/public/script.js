@@ -4,18 +4,18 @@ const parseJSON = async (url) => {
 };
 
 
-const mainPageContent = () => {
-    return`
-        <h1>Hello World! It's Codecool</h1>
-    `
-};
+// const mainPageContent = () => {
+//     return`
+//         <h1>Hello World! It's Codecool</h1>
+//     `
+// };
 
 
-const loadEvent = () => {
+// const loadEvent = () => {
 
-    const rootElement = document.getElementById("root");
+//     const rootElement = document.getElementById("root");
 
-    rootElement.insertAdjacentHTML("beforeend", mainPageContent());
-};
+//     rootElement.insertAdjacentHTML("beforeend", mainPageContent());
+// };
 
-window.addEventListener("load", loadEvent);
+// window.addEventListener("load", loadEvent);
