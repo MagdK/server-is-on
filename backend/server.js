@@ -11,9 +11,14 @@ const studentFile = path.join(`${__dirname}/../frontend/students.json`);
 
 const pathToFrontend = path.join(`${__dirname}/../frontend`);
 
-app.get('/', (req, res, next) => { 
-    res.sendFile(path.join(`${pathToFrontend}/../frontend/index.html`));
-})
+app.get('/', (req, res) => {
+    res.send(`<h1>Hello World! It's Codecool.</h1>`)
+});
+
+
+// app.get('/', (req, res, next) => { 
+//     res.sendFile(path.join(`${pathToFrontend}/../frontend/index.html`));
+// });
 
 app.use('/public', express.static(`${pathToFrontend}/../frontend/public`));
 
@@ -50,6 +55,7 @@ app.get('/api/status/active', (req, res, next) => {
         }
     })
 });
+
 
 app.get('/api/status/finished', (req, res, next) => { 
     fs.readFile(studentFile, (error, data) => {
